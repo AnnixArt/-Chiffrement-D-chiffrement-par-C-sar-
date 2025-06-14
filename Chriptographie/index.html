@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chiffrement & Déchiffrement</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Application de Chiffrement & Déchiffrement</h1>
+
+    <div class="section">
+      <label for="textInput">Texte à traiter :</label>
+      <textarea id="textInput" placeholder="Entrez votre texte ici..."></textarea>
+    </div>
+
+    <div class="section">
+      <label for="shiftInput">Décalage (clé de chiffrement) :</label>
+      <input type="number" id="shiftInput" value="3" min="1" max="25"/>
+    </div>
+
+    <div class="button-group">
+      <button onclick="chiffrer()">🔒 Chiffrer</button>
+      <button onclick="dechiffrer()">🔓 Déchiffrer</button>
+      <button onclick="resetForm()">🔄 Réinitialiser</button>
+    </div>
+
+    <div class="section">
+      <label for="output">Résultat :</label>
+      <textarea id="output" readonly></textarea>
+    </div>
+
+    <div class="section explanation">
+      <h2>🧠 Explication</h2>
+      <p>Le <strong>chiffrement César</strong> consiste à décaler chaque lettre du texte d’un certain nombre de positions dans l’alphabet.</p>
+      <ul>
+        <li>Avec un décalage de 3, <code>A → D</code>, <code>B → E</code>, <code>Z → C</code>, etc.</li>
+        <li>Ce décalage est cyclique et ne modifie pas les caractères spéciaux (espaces, chiffres, ponctuations).</li>
+        <li>Le déchiffrement inverse ce décalage.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
